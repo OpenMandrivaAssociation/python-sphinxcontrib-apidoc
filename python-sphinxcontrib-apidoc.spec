@@ -3,7 +3,7 @@
 
 Name:		python-sphinxcontrib-apidoc
 Version:	0.6.0
-Release:	1
+Release:	2
 Summary:	A Sphinx extension for running sphinx-apidoc on each build
 License:	BSD License
 Group:		Development/Python
@@ -16,6 +16,10 @@ BuildRequires:	python%{pyver}dist(pbr)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
+BuildRequires:	pkgconfig(python3)
+
+%build -p
+export PBR_VERSION="%{version}"
 
 %description
 A Sphinx extension for running 'sphinx-apidoc' on each build.
@@ -24,5 +28,4 @@ A Sphinx extension for running 'sphinx-apidoc' on each build.
 %doc README.rst
 %license LICENSE
 %{py_sitedir}/sphinxcontrib
-%{py_sitedir}/%{oname}-%{version}-py%{pyver}-nspkg.pth
 %{py_sitedir}/%{oname}-%{version}.dist-info
