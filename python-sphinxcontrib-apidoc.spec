@@ -28,4 +28,5 @@ A Sphinx extension for running 'sphinx-apidoc' on each build.
 %doc README.rst
 %license LICENSE
 %{py_sitedir}/sphinxcontrib
+%{py_sitedir}/%{oname}-%{version}-py%{pyver}-nspkg.pth
 %{py_sitedir}/%{oname}-%{version}.dist-info
